@@ -1,0 +1,59 @@
+fruits = ["Apple", "Banana", "Mango", "Orange", "Grapes"]
+# Q1. Add "Pineapple" to the end of the fruits list.
+fruits.append("Pineapple")
+print(fruits)
+
+# Q2. Insert "Watermelon" at index 2 in the fruits list.
+fruits.insert(2,"Watermelon")
+print(fruits)
+
+# Q3. Remove "Banana" from the fruits list.
+fruits.remove("Banana")
+print(fruits)
+
+# Q4. Remove the last fruit from the list.
+fruits.pop()
+print(fruits)
+
+# Q5. Arrange all fruits in alphabetical order.
+fruits.sort()
+print(fruits)
+
+# Q6. Reverse the order of fruits in the list.
+fruits.sort(reverse=True)
+print(fruits)
+
+# Q7. Add "Apple" two more times to the fruits list.
+fruits.insert(1,"Apple")
+print(fruits.count("Apple")) 
+print(fruits)
+
+# Q8. Find and print the index position of "Mango" in the list.
+print(fruits.index("Mango"))  
+print(fruits)
+
+# Q9. Create a new list containing "Papaya", "Kiwi", and "Guava".
+# Add all the fruits to the existing fruits list.
+# Print the updated list.
+fruits.extend(["Papaya","Kiwi","Guava"])
+print(fruits)
+
+# Q10. Create a copy of the fruits list in a new variable called fruits_copy.
+# Print both lists.
+fruits_copy=fruits.copy()
+print(fruits)
+print(fruits_copy)
+
+['Apple', 'Banana', 'Mango', 'Orange', 'Grapes', 'Pineapple']
+['Apple', 'Banana', 'Watermelon', 'Mango', 'Orange', 'Grapes', 'Pineapple']
+['Apple', 'Watermelon', 'Mango', 'Orange', 'Grapes', 'Pineapple']
+['Apple', 'Watermelon', 'Mango', 'Orange', 'Grapes']
+['Apple', 'Grapes', 'Mango', 'Orange', 'Watermelon']
+['Watermelon', 'Orange', 'Mango', 'Grapes', 'Apple']
+2
+['Watermelon', 'Apple', 'Orange', 'Mango', 'Grapes', 'Apple']
+3
+['Watermelon', 'Apple', 'Orange', 'Mango', 'Grapes', 'Apple']
+['Watermelon', 'Apple', 'Orange', 'Mango', 'Grapes', 'Apple', 'Papaya', 'Kiwi', 'Guava']
+['Watermelon', 'Apple', 'Orange', 'Mango', 'Grapes', 'Apple', 'Papaya', 'Kiwi', 'Guava']
+['Watermelon', 'Apple', 'Orange', 'Mango', 'Grapes', 'Apple', 'Papaya', 'Kiwi', 'Guava']
