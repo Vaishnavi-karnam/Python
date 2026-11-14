@@ -1,0 +1,17 @@
+import numpy as zu
+a=zu.array([30,40,12,10,19,90,50,70])
+print(a[a>=35])
+print (zu.max(a))
+print(zu.sum(a))
+print(zu.min(a))
+print(zu.mean(a))
+print(zu.average(a))
+print(zu.median(a))
+print(zu.std(a))
+
+
+print(a+5)
+print(a.ndim)
+print(a.shape)
+print(a.size)
+print(a.dtype)
