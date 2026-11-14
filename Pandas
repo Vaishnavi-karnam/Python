@@ -1,0 +1,94 @@
+import pandas as pd
+s1=pd.Series([20,30,40,50,30,55],index=["pooja","ajay","kavya","zuzu","kiki","nivi"])
+print(s1)
+print(s1["zuzu"])
+print(s1[s1>=40])
+
+
+import pandas as zu
+
+Books={"Name":["SQL","PYTHON","EXCEL"],"Price":[100,300,600],"City":["Delhi","Pune","Bangalore"]}
+df=zu.DataFrame(Books)
+#print(df)
+
+#show only names
+#print(df["Name"])
+
+#show only names and prices
+#print(df[["Name","Price"]])
+
+#show the table of books with price above or equal to 300
+#print(df[df["Price"]>=300])
+
+#show books that are sold in Delhi
+#print(df[df["City"]=="Delhi"])
+
+
+import pandas as pd
+
+data = {
+    "Customer_ID": list(range(101, 121)),
+    "Name": [
+        "Amit", "Neha", "Rahul", "Priya", "Vikas",
+        "Sneha", "Rohit", "Pooja", "Karan", "Anjali",
+        "Manish", "Simran", "Deepak", "Riya", "Arjun",
+        "Kavita", "Nitin", "Meena", "Varun", "Isha"
+    ],
+    "Age": [
+        25, 32, 45, 28, 51, 36, 23, 42, 31, 29,
+        55, 38, 47, 26, 34, 49, 40, 30, 44, 27
+    ],
+    "Gender": [
+        "Male", "Female", "Male", "Female", "Male",
+        "Female", "Male", "Female", "Male", "Female",
+        "Male", "Female", "Male", "Female", "Male",
+        "Female", "Male", "Female", "Male", "Female"
+    ],
+    "City": [
+        "Delhi", "Mumbai", "Delhi", "Pune", "Jaipur",
+        "Mumbai", "Delhi", "Pune", "Jaipur", "Delhi",
+        "Mumbai", "Pune", "Delhi", "Jaipur", "Mumbai",
+        "Delhi", "Pune", "Mumbai", "Jaipur", "Delhi"
+    ],
+    "Account_Type": [
+        "Savings", "Current", "Savings", "Savings", "Current",
+        "Savings", "Current", "Savings", "Savings", "Current",
+        "Savings", "Current", "Savings", "Savings", "Current",
+        "Savings", "Current", "Savings", "Current", "Savings"
+    ],
+    "Balance": [
+        25000, 60000, 45000, 18000, 90000,
+        32000, 12000, 75000, 28000, 55000,
+        100000, 40000, 68000, 22000, 85000,
+        95000, 35000, 48000, 72000, 15000
+    ],
+    "Loan_Amount": [
+        0, 200000, 500000, 0, 800000,
+        150000, 100000, 400000, 0, 250000,
+        1000000, 300000, 600000, 0, 350000,
+        700000, 200000, 0, 450000, 100000
+    ]
+}
+
+df = pd.DataFrame(data)
+
+#print(df)
+
+
+#Display customers whose Balance is greater than ₹50,000.
+#print(df[df["Balance"]>=50000])
+
+#Find customers whose Age is greater than 40.
+#print(df[df["Age"]>=40])
+
+# Display customers living in Delhi.
+#print(df[df["City"]=="Delhi"])
+
+#Find customers with Account_Type equal to Savings.
+#print(df[df["Account_Type"]=="Savings"])
+
+#Find customers whose Loan_Amount is greater than ₹3,00,000.
+#print(df[df["Loan_Amount"]>=300000])
+
+# Display female customers whose Balance is greater than ₹30,000.
+#print(df[(df["Gender"]=="Female")&(df["Balance"]>=30000)])
