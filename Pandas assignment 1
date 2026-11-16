@@ -1,0 +1,99 @@
+import pandas as pd
+
+data = {
+    "Employee_ID": [101, 102, 103, 104, 105, 106, 107, 108, 109, 110],
+    "Name": ["Amit", "Priya", "Rahul", "Neha", "Vikas", "Sneha", "Arjun", "Pooja", "Karan", "Riya"],
+    "City": ["Delhi", "Mumbai", "Delhi", "Pune", "Mumbai", "Delhi", "Pune", "Chennai", "Delhi", "Mumbai"],
+    "Department": ["Sales", "HR", "Sales", "IT", "Sales", "HR", "Sales", "IT", "Sales", "HR"],
+    "Age": [25, 30, 28, 35, 24, 29, 32, 27, 26, 31],
+    "Salary": [30000, 45000, 38000, 55000, 28000, 42000, 50000, 40000, 35000, 47000],
+    "Sales": [50000, 30000, 65000, 40000, 55000, 25000, 70000, 45000, 60000, 35000]
+}
+
+df = pd.DataFrame(data)
+
+#print(df)
+
+#A. Add New Columns
+#1.	Add a new column Annual_Salary by multiplying Salary by 12.
+#df["Annual_Salary"]=df["Salary"]*12
+
+#2.	Add a new column Bonus equal to 10% of Sales.
+#df["Bonus"]=df["Sales"]*10/100
+
+#3.	Add a new column Total_Income by adding Salary and Bonus.
+#df["Bonus"]=df["Sales"]*10/100 
+#df["Total_Income"]=df["Bonus"]=df["Sales"]
+#print(df)
+
+#4.	Add a new column Sales_Lakhs by dividing Sales by 100000.
+#df["Sales_Lakhs"]=df["Sales"]/100000
+#print(df)
+
+#B. Remove Columns
+#5.	Remove the Age column from the DataFrame.
+#df.drop("Age",axis=1)
+#print(df)
+
+#6.	Remove the Department and Sales_Lakhs columns.
+#df.drop("Department": "Sales_Lakhs",axis=1)
+#print(df)
+
+#7.	Remove the Employee_ID column permanently using inplace=True.
+#df.drop("Employee_ID",axis=1,inplace=True)
+#print(df)
+
+#C. Remove Rows
+#8.	Remove the first row from the DataFrame.
+#df.drop(0,axis=0,inplace=True)
+#print(df)
+
+#9.	Remove the row having Employee_ID = 105.
+#df.drop(df[df['Employee_ID'] == 105].index, inplace=True)
+
+# or df = df[df['Employee_ID'] != 105]
+#print(df)
+
+#10.	Remove the last two rows from the DataFrame.
+#df=df.iloc[:-2]
+#print(df)
+
+#D. Filter Rows
+#11.	Display employees whose Salary is greater than 40,000.
+#print(df.loc[df["Salary"]>40000])
+
+#12.	Display employees whose Sales are less than 50,000.
+#print(df.loc[df["Sales"]<50000])
+
+#13.	Display employees who belong to the Sales department.
+#print(df[df["Department"]=="Sales"])
+
+#14.	Display employees who are from Delhi.
+#print(df[df["City"]=="Delhi"])
+#print(df.loc[df["City"]=="Delhi"])
+
+#print(df["Name"][df["City"]=="Delhi"])
+
+#E. AND Condition
+#15.	Display employees whose Salary is greater than 40,000 AND Sales are greater than 50,000.
+#print(df[df["Salary"]>40000], df[df["Sales"]>50000])
+
+#16.	Display employees who are from Delhi AND belong to the Sales department.
+print(df[df["City"]=="Delhi"] & df[df["Department"]=="Sales"])
+#df = df[(df['City'] == 'Delhi') & (df['Department'] == 'Sales')]
+#print(df)
+
+#F. OR Condition
+#17.	Display employees who are from Delhi OR Mumbai.
+
+
+#18.	Display employees whose Salary is less than 30,000 OR Sales are greater than 60,000.
+
+#G. NOT Condition
+#19.	Display employees who are NOT from Delhi.
+
+#H. Rename Columns
+#20.	Rename the following columns:
+#•	Name → Employee_Name
+#•	City → Location
+#•	Salary → Monthly_Salary
